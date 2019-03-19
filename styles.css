@@ -7,6 +7,10 @@ html {
   overflow-x: hidden;
 }
 
+svg.path {
+  stroke: #f2d388;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -162,25 +166,15 @@ h1 {
   line-height: 0.9;
 }
 
-.gold-bg {
-  /* background-color: #efcc90; */
-  background-color: #f2d388;
-}
-
-.black-bg {
-  background-color: #111;
-  color: #fff;
-}
-
 a {
   background-color: transparent;
-  color: #5f34b5;
+  color: #BB941F;
   text-decoration: none;
   word-wrap: break-word;
 }
 
 a:hover {
-  color:#3c2173;
+  color:#816615;
   text-decoration: underline;
 }
 
@@ -189,8 +183,11 @@ p {
 }
 
 img {
-  border-style:none;
   max-width: 100%;
+}
+
+img.border {
+  border: 1px solid #CCA22C;
 }
 
 img.main-logo {
@@ -200,13 +197,11 @@ img.main-logo {
 
 img.lead {
   display: block;
-  margin: 0 auto -50px auto;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
 }
 
 img.about {
   width: 500px;
-  border: 1px solid #ccc;
 }
 
 img.kicker {
@@ -220,6 +215,7 @@ div.section-inner {
 }
 
 div.section-inner h1 {
+  text-align: center;
   margin: 0;
 }
 
@@ -246,17 +242,22 @@ div.inventory-wrapper {
 }
 
 div.box {
-  background: white;
   padding: 10px;
   margin: 15px;
-  border-top: 10px solid black;
-  min-height: 395px;
+  border: 1px solid #CCA22C;
+  border-top: 10px solid #CCA22C;
+  cursor: pointer;
+}
+
+div.box table {
+  display: none;
 }
 
 div.box h4 {
   font-size: 1.7rem;
   font-weight: bold;
   margin: 5px 0 15px 0;
+  text-align: center;
 }
 
 p.firstgraf {
@@ -285,4 +286,10 @@ p.firstgraf {
   div.box {
     min-height: inherit;
   }
+}
+
+img.divider {
+  display: block;
+  margin: -100px auto -150px auto;
+  width: 250px;
 }

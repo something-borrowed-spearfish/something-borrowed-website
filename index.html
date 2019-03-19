@@ -28,6 +28,7 @@
         "addressRegion": "SD",
         "postalCode": "57783"
       },
+      "telephone": "605-559-0265",
       "geo":{
         "@type":"GeoCoordinates",
         "latitude":44.4852576,
@@ -56,19 +57,19 @@
 
           <p>Contact us now to discuss your next event.</p>
           <p>
-            <b>Phone</b>: <a href="tel:605-641-3819">605-641-3819</a>
+            <b>Phone</b>: <a href="tel:605-559-0265">605-559-0265</a>
           </p>
           <p>
             <b>Email</b>: <a href="mailto:somethingborrowedspearfish@gmail.com">somethingborrowedspearfish@gmail.com</a>
           </p>
         </div>
         <div class="c g2">
-          <img class="lead" src="img/lead.jpg" />
+          <img class="lead border" src="img/lead.jpg" />
         </div>
       </div>
     </section>
 
-    <section class="legacy black-bg">
+    <section class="legacy">
       <div class="section-inner">
         <h1>Different name, same great company</h1>
         <p>Dakota Party Rental is now Something Borrowed wedding and event rentals.</p>
@@ -76,10 +77,12 @@
       </div>
     </section>
 
-    <section class="inventory gold-bg">
+    <img class="divider" src="img/divider.svg" />
+
+    <section class="inventory">
       <div class="section-inner">
         <h1>Browse our inventory</h1>
-        <p>Contact us for pricing and availability.</p>
+        <p style="text-align: center;">Contact us for pricing and availability.</p>
 
 
         <div class="inventory-wrapper">
@@ -209,35 +212,13 @@
 
           <div class="c g3">
             <div class="box">
-              <h4>Deadwood-style gaming equipment</h4>
-              <table>
-                <tr><td>73-inch blackjack table</td></tr>
-                <tr><td>Roulette wheel</td></tr>
-                <tr><td class="final">Chips of various colors with case</td></tr>
-              </table>
-            </div>
-          </div>
-
-          <div class="c g3">
-            <div class="box">
-              <h4>Other goods</h4>
+              <h4>Party additions</h4>
               <table>
                 <tr><td>Bullhorn</td></tr>
                 <tr><td>Popcorn popper with cart</td></tr>
                 <tr><td>Cotton candy machine with cart</td></tr>
                 <tr><td>Sno-cone machine</td></tr>
                 <tr><td class="final">50-foot extension cord (white)</td></tr>
-              </table>
-            </div>
-          </div>
-
-          <div class="c g3">
-            <div class="box">
-              <h4>Items for purchase</h4>
-              <table>
-                <tr><td>Sno-cone syrup and cones</td></tr>
-                <tr><td>Cotton candy sugar and sticks</td></tr>
-                <tr><td class="final">Popcorn bags and corn</td></tr>
               </table>
             </div>
           </div>
@@ -250,16 +231,18 @@
       </div>
     </section>
 
-    <section class="about white-bg">
+    <img class="divider" src="img/divider.svg" />
+
+    <section class="about">
       <div class="section-inner">
         <div class="row">
           <div class="c g2">
-            <img class="about" src="img/about.jpg" />
+            <img class="about border" src="img/about.jpg" />
           </div>
           <div class="c g2">
             <h1>About us</h1>
             <p>We started Something Borrowed because we loved the work and wanted to make it our own.</p>
-            <p>Working for Dakota Party Rental for the past decade, we’ve seen the potential for business growth, which means doing more of what we love: Creating memorable weddings and special events for our valued customers.</p>
+            <p>Working for Dakota Party Rental for nearly a decade, we’ve seen the potential for business growth, which means doing more of what we love: Creating memorable weddings and special events for our valued customers.</p>
             <p>We want to build on our longstanding reputation for creativity, thoughtful planning and second-to-none customer service.</p>
             <p>We look forward to serving you!</p>
 
@@ -273,13 +256,34 @@
         </div>
       </div>
       <p class="tagline">© <span id="year"></span> Something Borrowed, LLC&ensp;&bull;&ensp;Creating picture-perfect weddings and events since 2010&ensp;&bull;&ensp;Family photo by Jenny Enos</p>
+
+      <p class="tagline">Divider icon by <a href="https://thenounproject.com/search/?q=divider&i=1206851">Valeriy from the Noun Project</a></p>
     </section>
 
   </div>
 
 <script>
   var copyright_year = document.getElementById('year');
-  copyright_year.innerHTML = (new Date()).getFullYear();  
+  copyright_year.innerHTML = (new Date()).getFullYear();
+
+  var open_box = null;
+
+  var boxes = document.querySelectorAll('div.box');
+  
+  for (var i=0; i<boxes.length; i++){
+    boxes[i].addEventListener('click', function() {
+      if (open_box === this) {
+        return;
+      }
+      if (open_box) {
+        open_box.querySelectorAll('table')[0].style.display = 'none';
+      }
+      open_box = this;
+      var table = open_box.querySelectorAll('table')[0];
+      table.style.display = 'block';
+    });
+  }
+
 </script>
 </body>
 </html>
