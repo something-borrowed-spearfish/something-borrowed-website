@@ -267,9 +267,10 @@
           </div>
         </div>
       </div>
-      <p class="tagline">© <span id="year"></span> Something Borrowed, LLC&ensp;&bull;&ensp;Creating picture-perfect weddings and events since 2010&ensp;&bull;&ensp;Family photo by Jenny Enos</p>
-
-      <p class="tagline">Divider icon by <a href="https://thenounproject.com/search/?q=divider&i=1206851">Valeriy from the Noun Project</a></p>
+      <footer>
+        <p class="tagline">© <span id="year"></span> Something Borrowed, LLC&ensp;&bull;&ensp;Creating picture-perfect weddings and events since 2010&ensp;&bull;&ensp;Family photo by Jenny Enos</p>
+        <p class="tagline">Divider icon by <a href="https://thenounproject.com/search/?q=divider&i=1206851">Valeriy from the Noun Project</a></p>
+      </footer>
     </section>
 
   </div>
@@ -278,21 +279,16 @@
   var copyright_year = document.getElementById('year');
   copyright_year.innerHTML = (new Date()).getFullYear();
 
-  var open_box = null;
-
   var boxes = document.querySelectorAll('div.box');
   
   for (var i=0; i<boxes.length; i++){
     boxes[i].addEventListener('click', function() {
-      if (open_box === this) {
-        return;
+      var table = this.querySelectorAll('table')[0];
+      if (table.style.display === 'block') {
+        table.style.display = 'none'
+      } else {
+        table.style.display = 'block';
       }
-      if (open_box) {
-        open_box.querySelectorAll('table')[0].style.display = 'none';
-      }
-      open_box = this;
-      var table = open_box.querySelectorAll('table')[0];
-      table.style.display = 'block';
     });
   }
 

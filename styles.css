@@ -258,6 +258,12 @@ div.box h4 {
   font-weight: bold;
   margin: 5px 0 15px 0;
   text-align: center;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 p.firstgraf {
@@ -293,6 +299,10 @@ img.social-icon {
   padding-top: 10px;
 }
 
+footer {
+  padding: 1rem;
+}
+
 @media (max-width:768px) {
   div.section-inner {
     padding: 2rem;
@@ -311,8 +321,5 @@ img.social-icon {
   }
   section.legacy {
     padding-top: 0;
-  }
-  div.box {
-    min-height: inherit;
   }
 }
