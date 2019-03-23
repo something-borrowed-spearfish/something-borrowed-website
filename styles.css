@@ -264,6 +264,35 @@ p.firstgraf {
   margin-top: 0;
 }
 
+img.divider {
+  display: block;
+  margin: -100px auto -150px auto;
+  width: 250px;
+}
+
+div.social {
+  margin-top: 50px;
+  display: flex;
+}
+
+div.social a {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  padding: 8px 0;
+  border-top: 2px solid #CCA22C;
+  border-bottom: 2px solid #CCA22C;
+}
+
+div.social a:hover {
+  background-color: #f8f1dd;
+}
+
+img.social-icon {
+  width: 30px;
+  padding-top: 10px;
+}
+
 @media (max-width:768px) {
   div.section-inner {
     padding: 2rem;
@@ -286,10 +315,4 @@ p.firstgraf {
   div.box {
     min-height: inherit;
   }
-}
-
-img.divider {
-  display: block;
-  margin: -100px auto -150px auto;
-  width: 250px;
 }
