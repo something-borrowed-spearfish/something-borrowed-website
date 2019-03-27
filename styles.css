@@ -258,6 +258,7 @@ div.box h4 {
   font-weight: bold;
   margin: 5px 0 15px 0;
   text-align: center;
+  line-height: 1;
   -webkit-touch-callout: none;
     -webkit-user-select: none;
      -khtml-user-select: none;
@@ -303,6 +304,10 @@ footer {
   padding: 1rem;
 }
 
+div.about {
+  padding-left: 30px;
+}
+
 @media (max-width:768px) {
   div.section-inner {
     padding: 2rem;
@@ -321,5 +326,12 @@ footer {
   }
   section.legacy {
     padding-top: 0;
+  }
+  div.about {
+    padding-left: 0;
+  }
+  img.about {
+    margin: 0 auto 30px auto;
+    display: block;
   }
 }
