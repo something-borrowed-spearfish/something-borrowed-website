@@ -233,8 +233,9 @@ section.about {
 }
 
 p.tagline {
+  font-family: Arial, sans-serif;
   text-align: center;
-  font-size: 16px;
+  font-size: 10px;
 }
 
 div.inventory-wrapper {
